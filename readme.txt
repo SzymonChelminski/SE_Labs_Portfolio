@@ -1,1 +1,0 @@
-This repository contains a comprehensive set of design documents and UML diagrams developed for a Library Management System (LMS). The project was created as part of the Software Engineering laboratory course to practice systematic software analysis and design.
