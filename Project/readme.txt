@@ -1,0 +1,1 @@
+The goal of this project is to model a system that manages book collections, member registrations, and the borrowing/return processes. Each laboratory session focused on a different aspect of the system's architecture and dynamic behavior, ensuring a robust design for a modern library environment.

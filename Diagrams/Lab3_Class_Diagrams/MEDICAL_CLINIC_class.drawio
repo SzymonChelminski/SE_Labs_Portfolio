@@ -1,0 +1,39 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Strona-1" id="1ZUjz1ypc_j6dmtT0X5h">
+    <mxGraphModel dx="934" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="Clinic&#xa;--&#xa;+ clinicName: String&#xa;- address: String&#xa;--&#xa;+ addStaff(MedicalStaff): void" vertex="1">
+          <mxGeometry height="90" width="160" x="280" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="MedicalStaff&#xa;--&#xa;# staffID: String&#xa;# name: String&#xa;--&#xa;+ performDuty(): void" vertex="1">
+          <mxGeometry height="110" width="160" x="280" y="180" as="geometry">
+            <mxRectangle height="100" width="150" x="280" y="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4" edge="1" parent="1" source="2" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="Doctor&#xa;--&#xa;- specialization: String&#xa;--&#xa;+ writePrescription(): void" vertex="1">
+          <mxGeometry height="90" width="160" x="280" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="6" edge="1" parent="1" source="5" style="endArrow=block;endFill=0;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="PatientRecord&#xa;--&#xa;- recordID: String&#xa;- patientName: String&#xa;--&#xa;+ getHistory(): void" vertex="1">
+          <mxGeometry height="110" width="160" x="20" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="Diagnosis&#xa;--&#xa;- description: String&#xa;- date: Date&#xa;--&#xa;+ editDiagnosis(): void" vertex="1">
+          <mxGeometry height="110" width="160" x="20" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="9" edge="1" parent="1" source="7" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="7" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="3" value="manages">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

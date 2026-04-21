@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Strona-1" id="khCrkPQ6bE5wreJ9iuKr">
+    <mxGraphModel dx="934" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="Library&#xa;--&#xa;+ name: String&#xa;- universityID: String&#xa;--&#xa;+ addBook(Book): void&#xa;+ findBook(String): Book" vertex="1">
+          <mxGeometry height="110" width="180" x="300" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="Book&#xa;--&#xa;# isbn: String&#xa;+ title: String&#xa;--&#xa;+ checkout(): void" vertex="1">
+          <mxGeometry height="100" width="160" x="300" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="4" edge="1" parent="1" source="2" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="Chapter&#xa;--&#xa;- chapterNo: int&#xa;- title: String&#xa;--&#xa;+ getPageCount(): int" vertex="1">
+          <mxGeometry height="100" width="160" x="300" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="6" edge="1" parent="1" source="3" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="LibraryUser&#xa;--&#xa;# userID: String&#xa;# name: String&#xa;--&#xa;+ borrowItem(): void" vertex="1">
+          <mxGeometry height="100" width="160" x="20" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="Student&#xa;--&#xa;- studentID: String&#xa;--&#xa;+ renewBook(): void" vertex="1">
+          <mxGeometry height="90" width="160" x="20" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="9" edge="1" parent="1" source="8" style="endArrow=block;endFill=0;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="7" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="3" value="borrows">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

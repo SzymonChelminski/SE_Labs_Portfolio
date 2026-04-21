@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.4">
+  <diagram name="Strona-1" id="Vg5CEebXaG37DZRF-lkL">
+    <mxGraphModel dx="1113" dy="662" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="boundary" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;verticalAlign=top;fontSize=16;fontStyle=1;spacingTop=8;" value="Car Insurance System" vertex="1">
+          <mxGeometry height="680" width="740" x="220" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actorClient" parent="1" style="shape=umlActor;fontSize=13;fontStyle=1;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#000000;strokeColor=#000000;html=1;" value="Client" vertex="1">
+          <mxGeometry height="80" width="50" x="60" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="actorAgent" parent="1" style="shape=umlActor;fontSize=13;fontStyle=1;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#000000;strokeColor=#000000;html=1;" value="Insurance Agent" vertex="1">
+          <mxGeometry height="80" width="50" x="60" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="actorPayment" parent="1" style="shape=umlActor;fontSize=13;fontStyle=1;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#000000;strokeColor=#000000;html=1;" value="Payment System" vertex="1">
+          <mxGeometry height="80" width="50" x="1040" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="ucLogin" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="Login" vertex="1">
+          <mxGeometry height="55" width="160" x="760" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ucRegister" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="Register Policy" vertex="1">
+          <mxGeometry height="55" width="160" x="310" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ucClaim" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="File a Claim" vertex="1">
+          <mxGeometry height="55" width="160" x="310" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ucPay" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="Pay Premium" vertex="1">
+          <mxGeometry height="55" width="160" x="310" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="ucProcess" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="Process Payment" vertex="1">
+          <mxGeometry height="55" width="160" x="760" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="ucNotif" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="Send Notification" vertex="1">
+          <mxGeometry height="55" width="160" x="760" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="ucReview" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;" value="Review Claim" vertex="1">
+          <mxGeometry height="55" width="160" x="760" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" edge="1" parent="1" source="actorClient" style="endArrow=none;html=1;" target="ucRegister">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" edge="1" parent="1" source="actorClient" style="endArrow=none;html=1;" target="ucClaim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" edge="1" parent="1" source="actorClient" style="endArrow=none;html=1;" target="ucPay">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" edge="1" parent="1" source="actorAgent" style="endArrow=none;html=1;" target="ucReview">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" edge="1" parent="1" source="actorPayment" style="endArrow=none;html=1;" target="ucProcess">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc1" edge="1" parent="1" source="ucRegister" style="dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;fontStyle=2;edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;labelBorderColor=none;fontColor=#000000;" target="ucLogin" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc2" edge="1" parent="1" source="ucPay" style="dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;fontStyle=2;edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;labelBorderColor=none;fontColor=#000000;" target="ucProcess" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext1" edge="1" parent="1" source="ucClaim" style="dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;fontStyle=2;edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;labelBorderColor=none;fontColor=#000000;" target="ucNotif" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="347" />
+              <mxPoint x="560" y="247" />
+              <mxPoint x="760" y="247" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ext2" edge="1" parent="1" source="ucClaim" style="dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;fontStyle=2;edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;labelBorderColor=none;fontColor=#000000;" target="ucReview" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

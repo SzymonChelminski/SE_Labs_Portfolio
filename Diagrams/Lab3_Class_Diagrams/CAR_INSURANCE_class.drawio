@@ -1,0 +1,45 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Strona-1" id="zcYSeWhFla13mP5vKm6V">
+    <mxGraphModel dx="934" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="InsuranceCompany&#xa;--&#xa;+ companyName: String&#xa;--&#xa;+ issuePolicy(): void&#xa;+ processClaim(): void" vertex="1">
+          <mxGeometry height="110" width="180" x="300" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="Customer&#xa;--&#xa;- customerID: String&#xa;+ name: String&#xa;--&#xa;+ buyPolicy(): void" vertex="1">
+          <mxGeometry height="110" width="160" x="300" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="4" edge="1" parent="1" source="2" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="InsurancePolicy&#xa;--&#xa;# policyNumber: String&#xa;# premium: double&#xa;--&#xa;+ calculateRisk(): void" vertex="1">
+          <mxGeometry height="110" width="160" x="580" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="ComprehensivePolicy&#xa;--&#xa;- theftCoverage: bool&#xa;--&#xa;+ evaluateDamage(): void" vertex="1">
+          <mxGeometry height="90" width="160" x="580" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="7" edge="1" parent="1" source="6" style="endArrow=block;endFill=0;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="Car&#xa;--&#xa;+ vin: String&#xa;- model: String&#xa;--&#xa;+ getCarDetails(): String" vertex="1">
+          <mxGeometry height="110" width="160" x="20" y="200" as="geometry">
+            <mxRectangle height="100" width="170" x="20" y="200" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;" value="Engine&#xa;--&#xa;- engineID: String&#xa;- hp: int&#xa;--&#xa;+ start(): void" vertex="1">
+          <mxGeometry height="110" width="160" x="20" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="8" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" source="8" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="3" value="owns">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="3" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="5" value="insures">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
